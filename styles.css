@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.float-center {
+    float: center;
+}
+
+.justify-content-left {
+    justify-content: left;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-right {
+    justify-content: right;
+}
+
+.sans-serif {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.rotate {
+    animation: rotate-clockwise 15s linear infinite;
+}
+
+@keyframes rotate-clockwise {
+    from {
+      transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+      transform: rotate(360deg); /* Rotate counterclockwise to -360 degrees */
+    }  
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+.navbar-container {
+    padding: 0 1.5%;
+    display: flex;
+    height: 100%;
+    width: 25%;
+    align-items: center;
+}
+
+.nav-buttons {
+    height: 100%;
+    list-style: none;
+    display: flex;
+}
+
+.navbar-button {
+    height: 100%;
+    padding: 0px 10px; 
+    font-size: 1vw;
+    letter-spacing: 0.15vw;
+    color: #000000;
+    border: none;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #D3D3D3;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 75%;
+    color: #000000;
+}
+
+
+@media (max-width: 768px) {
+    .nav-buttons {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-buttons.active {
+      display: block;
+    }
+
+    .nav-toggle {
+      display: block;
+    }
+}
+
+.nav-toggle.active + .nav-buttons {
+    display: block;
+}
